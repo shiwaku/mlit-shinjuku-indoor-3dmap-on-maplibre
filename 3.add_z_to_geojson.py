@@ -13,7 +13,7 @@ from pathlib import Path
 IN_FILE  = Path("r3_tokyo_tochiriyo.geojson")      # 入力ファイル
 OUT_FILE = Path("r3_tokyo_tochiriyo.z406.geojson") # 出力ファイル
 
-BASE_Z   = 40.6     # 付与する標高[m]
+BASE_Z   = 38.5     # 付与する標高[m]
 FILL_ONLY = False   # False: 既存Zも上書き / True: Zが無い点だけ付与
 # ================================================================
 
