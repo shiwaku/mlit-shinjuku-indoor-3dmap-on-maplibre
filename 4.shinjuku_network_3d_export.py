@@ -20,7 +20,7 @@ from pyproj import CRS
 DATA_DIR = Path("./shape/nw")
 NODE_SHP = DATA_DIR / "Shinjuku_node.shp"
 LINK_SHP = DATA_DIR / "Shinjuku_link.shp"
-OUT_GEOJSON = Path("./Shinjuku_link_3d.geojson")
+OUT_GEOJSON = Path("./shinjuku_link_3d.geojson")
 
 # 列名（データ定義書に合わせて変更可能）
 NODE_ID_COL = "node_id"
