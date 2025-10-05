@@ -186,6 +186,29 @@
               // material: MATERIAL_FLAT,
               // pickable: true,
             }),
+            new deck.GeoJsonLayer({
+              id: "shinjuku_link_3d",
+              data: "./shinjuku_link_3d.geojson",
+              stroked: true,
+              filled: false,
+              lineWidthUnits: "meters",
+              getLineWidth: 0.2, // 太さ調整（0.6〜1.4）
+              getLineColor: [0, 255, 255, 50], // 明るめシアン
+              getDashArray: [2, 2], // 点線パターン [線の長さ, 間隔]
+              dashJustified: true, // パターンを線の端で揃える
+              parameters: {
+                depthTest: false, // 常に前面表示
+                blendFunc: [1, 1], // 加算合成（発光っぽく）
+                blendEquation: 32774, // FUNC_ADD
+              },
+              // Material（影響は少ないが念のため）
+              material: {
+                ambient: 1.0,
+                diffuse: 0.0,
+                shininess: 0.0,
+                specularColor: [0, 0, 0],
+              },
+            }),
             new deck.TerrainLayer({
               elevationData:
                 "https://xs489works.xsrv.jp/raster-tiles/gsi/gsi-dem-terrain-rgb/{z}/{x}/{y}.png",
