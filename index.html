@@ -206,6 +206,21 @@
                 specularColor: [0, 0, 0],
               },
             }),
+            new deck.GeoJsonLayer({
+              id: "road",
+              data: "./Road.geojson",
+              extruded: true,
+              wireframe: true,
+              filled: true,
+              stroked: true,
+              lineWidthUnits: "meters",
+              getLineWidth: 0.3,
+              getLineColor: [0, 255, 255, 255],
+              getFillColor: [0, 255, 255, 255],
+              getElevation: 20,
+              // material: MATERAL_FLAT,
+              // pickable: true,
+            }),
             new deck.TerrainLayer({
               elevationData:
                 "https://xs489works.xsrv.jp/raster-tiles/gsi/gsi-dem-terrain-rgb/{z}/{x}/{y}.png",
