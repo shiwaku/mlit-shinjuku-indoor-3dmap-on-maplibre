@@ -25,7 +25,7 @@ except Exception:
     make_valid = None
 
 # ====== 設定（必要に応じて変更） =========================================
-BASE_Z = 38.5  # 新宿駅の基準標高 (m, AMSL)
+BASE_Z = 37.5  # 新宿駅の基準標高 (m, AMSL)
 
 # フロアごとの相対オフセット (m)。BASE_Z に加算して絶対高さにします。
 # 地下はマイナス、屋外通路(out)は該当階と同じに設定。ここでは見やすさ優先で○倍強調。
@@ -41,7 +41,7 @@ FLOOR_OFFSETS = {
 }
 
 # 入出力ディレクトリ
-INPUT_DIR  = Path("./shape")
+INPUT_DIR  = Path("./shape/ShinjukuTerminal")
 OUTPUT_DIR = Path("./geojson")
 # ======================================================================
 
