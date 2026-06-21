@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data/raw/nw"
 NODE_SHP = DATA_DIR / "Shinjuku_node.shp"
 LINK_SHP = DATA_DIR / "Shinjuku_link.shp"
-OUT_GEOJSON = ROOT / "public/data/shinjuku_link_3d.geojson"
+OUT_GEOJSON = ROOT / "docs/data/shinjuku_link_3d.geojson"
 
 # 列名（データ定義書に合わせて変更可能）
 NODE_ID_COL = "node_id"

@@ -29,7 +29,7 @@
 
 ```
 .
-├── public/                         # 配信用の静的サイト（GitHub Pages の公開元）
+├── docs/                           # 配信用の静的サイト（GitHub Pages の公開元）
 │   ├── index.html                  #   MapLibre + deck.gl による可視化ページ
 │   └── data/                       #   ブラウザが読み込む GeoJSON
 │       ├── geojson_merged/         #     フロア×ジオメトリ種別の GeoJSON
@@ -110,15 +110,15 @@ scripts/01_make_3d_geojson.py
         ▼
 scripts/02_merge_floors.py
    フロア × ジオメトリ種別（polygons / lines / points）でマージ
-   → public/data/geojson_merged/Shinjuku_<floor>.<geom>.geojson
+   → docs/data/geojson_merged/Shinjuku_<floor>.<geom>.geojson
         │
         ▼
 scripts/04_network_3d.py
    node の ordinal から階を判定し Z を計算、link を始点〜終点で
-   線形補間して 3D 化 → public/data/shinjuku_link_3d.geojson
+   線形補間して 3D 化 → docs/data/shinjuku_link_3d.geojson
         │
         ▼
-public/index.html（MapLibre GL JS + deck.gl）で可視化
+docs/index.html（MapLibre GL JS + deck.gl）で可視化
 ```
 
 `scripts/03_add_z.py` は背景データ（土地利用モデル等）の全座標へ一律の Z 値を付与する補助スクリプトです。各スクリプトのパスはリポジトリルート基準で解決されるため、どのディレクトリから実行しても動作します。
@@ -150,11 +150,11 @@ python scripts/04_network_3d.py
 
 ### 2. 可視化（ブラウザ）
 
-`fetch` でローカルの GeoJSON を読み込むため、`public/` をルートにローカルサーバ経由で開きます。
+`fetch` でローカルの GeoJSON を読み込むため、`docs/` をルートにローカルサーバ経由で開きます。
 
 ```bash
-python -m http.server 8000 --directory public
+python -m http.server 8000 --directory docs
 # ブラウザで http://localhost:8000/ を開く
 ```
 
-> **GitHub Pages**: 公開元を「`main` ブランチ / `public` フォルダ」に設定してください（Settings → Pages → Branch → `/public`）。
+> **GitHub Pages**: 公開元を「`main` ブランチ / `/docs` フォルダ」に設定してください（Settings → Pages → Source: Deploy from a branch → Branch: `main` `/docs`）。

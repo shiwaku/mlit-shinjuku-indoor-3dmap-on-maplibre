@@ -24,7 +24,7 @@ from collections import defaultdict
 # ====== ここだけ触ればOK ===========================================
 ROOT       = Path(__file__).resolve().parents[1]
 INPUT_DIR  = ROOT / "data/intermediate"          # 元の *.3d.geojson 置き場
-OUTPUT_DIR = ROOT / "public/data/geojson_merged" # 出力先（配信用）
+OUTPUT_DIR = ROOT / "docs/data/geojson_merged" # 出力先（配信用）
 
 # どの種類のファイルを対象にするか（名前に含まれるサフィックスで判定）
 INCLUDE_KINDS = [
