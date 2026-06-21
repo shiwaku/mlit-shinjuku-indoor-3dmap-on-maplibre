@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<attribute>
+  <abstract>新宿駅周辺屋内地図オープンデータ</abstract>
+  <author>国土交通省国土政策局国土情報課</author>
+  <project>高精度測位社会プロジェクト</project>
+  <facility>新宿駅</facility>
+  <createdate>2020/8</createdate>
+  <source>
+    <name>新宿ターミナルマップ、駅構内図、施設平面図、フロアガイド、基盤地図情報</name>
+    <author>新宿ターミナル協議会、JR東日本コンサルタンツ株式会社、国土地理院、その他不明</author>
+    <createdate>2014/6-2020/7</createdate>
+    <dataformat>DWG/JWW/PDF/JPG/JPGIS（GML）</dataformat>
+    <scale>1/200-1/2500</scale>
+  </source>
+  <editmethod>Esri ArcGIS Desktop 10.3.1により作成</editmethod>
+  <survey>無</survey>
+</attribute>
